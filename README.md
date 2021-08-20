@@ -1,0 +1,2 @@
+# Vs_Code_Editor
+I made the editor which interface is similar to notepad But in this, we write python code and click the run button and get an output of the code. I have made this editor for those people who are new in the python field and, it is simple to use. Here in this editor, you can run python code without any hustle. Currently, it supports only python language But, I am actively working on it to extend the support for other languages.
