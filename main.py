@@ -104,8 +104,8 @@ class Vs_code:
     def open_file(self,event=None):
         path = filedialog.askopenfilename(filetype=[('Python Files', '*.py')], defaultextension=('.py'))
         if path!="":
-            data = os.path.split(path)
-            self.file_name = data[1]
+            info = os.path.split(path)
+            self.file_name = info[1]
             self.root.title(f"{self.file_name}- VS Editor - Developed By Vaibhav")
             self.path_name = path
             fp = open(self.path_name, "r")
@@ -125,8 +125,8 @@ class Vs_code:
     def save_as_file(self,event=None):
         path = filedialog.asksaveasfilename(filetype=[('Python Files', '*.py')], defaultextension=('.py'))
         if path!="":
-            data = os.path.split(path)
-            self.file_name = data[1]
+            info = os.path.split(path)
+            self.file_name = info[1]
             self.root.title(f"{self.file_name}- VS Editor - Developed By Vaibhav")
             self.path_name = path
             fp = open(self.path_name, "w")
@@ -169,7 +169,7 @@ class Vs_code:
 
             command=f'python {self.path_name}'
             run_file=subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-            print(self.path_name,command)
+            #print(self.path_name,command)
             output, error=run_file.communicate()
             self.text_output.delete('1.0', END)
             self.text_output.insert('1.0',output)
